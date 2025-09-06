@@ -32,5 +32,19 @@
 </style>
 </head>
 <body>
+    <h1>Student Registration Form</h1><br>
+    <form action="" method="POST">
+        <div class="">
+        <label for="name">Student Name:</label>
+        <input type="text" id="name" name="name" placeholder="Name" value="<?php echo $name;?>">
+        <span class="text-danger"><?php echo $nameError; ?></span><br><br>
+        </div>
+
+    <div class="">
+        <label for="mobile">Mobile no.: +95 - </label>
+        <input type="text" id="mobile" name="mobile" value="<?php echo $mobile;?>" >
+         <span class="text-danger"><?php echo $mobileError; ?></span><br><br>
+        </div>
+        
 </body>
 </html>
