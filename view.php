@@ -133,3 +133,32 @@ if(isset($_POST['update_button'])){
             <td><?php echo $student['mobile_number']; ?></td>
             <td><?php echo $student['email']; ?></td>
             <td><?php echo $student['gender']; ?></td>
+            <td><?php echo $student['department']; ?></td>
+            <td><?php echo $student['address']; ?></td>
+            <td><a href="view.php?id=<?php echo $student['id']; ?>">Edit</a></td>
+
+        </tr>
+    <?php } ?>
+        </tbody>
+    </table>
+    <a href="index.php">Register a New Student</a>
+<?php endif; ?>
+<?php if (isset($post_id_to_update)): ?>
+<h1>Edit Student Record</h1><br>
+<form action="" method="POST">
+    <input type="hidden" name="id" value="<?php echo $id; ?>">
+    <div>
+    <label for="name">Student Name:</label>
+    <input type="text" id="name" name="name" placeholder="Name" value="<?php echo $name ?>"> 
+    <span class="text-danger"><?php echo $nameError ?></span>
+    </div><br>
+    <div>
+    <label for="mobile">Mobile no.: +95 - </label>
+    <input type="text" id="mobile" name="mobile_number" value="<?php echo $mobile ?>">
+    <span class="text-danger"><?php echo $mobileError ?></span>
+    </div><br>
+    <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" value="<?php echo $email?>">
+    <span class="text-danger"><?php echo $emailError ?></span>
+    </div><br>
