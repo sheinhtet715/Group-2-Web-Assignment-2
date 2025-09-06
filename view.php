@@ -42,3 +42,22 @@ if(isset($_POST['update_button'])){
     if(empty($email)){
         $emailError="Email is required.";
     }
+     if(empty($department)){
+        $departmentError="Department is required.";
+    }
+    if(empty($address)){
+        $addressError="Address is required.";
+    }
+   if(!empty($name) && !empty($mobile) && !empty($email) && !empty($gender) && !empty($department) && !empty($address)){
+        $sql = "UPDATE registered_students SET name='$name', mobile_number='$mobile', email='$email', gender = '$gender',  department='$department', address='$address'
+        WHERE id=$post_id_to_update";
+        $result = mysqli_query($db,$sql);
+        if($result){
+            $_SESSION['message'] = "Record Updated Successfully";
+            header("Location: process.php");
+        }else{
+            echo "Failed: " . mysqli_error($db);
+        }
+    }  
+}  
+?>
