@@ -20,3 +20,25 @@
         }
     }
 }
+$nameError ='';
+    $mobileError ='';
+    $emailError ='';
+    $departmentError ='';
+    $addressError ='';
+if(isset($_POST['update_button'])){
+    $name = $_POST['name'];
+     $mobile = $_POST['mobile_number'];
+    $mobile = preg_replace('/\D/', '', $mobile);
+    $email = $_POST['email'];
+    $gender = $_POST['gender'];
+    $department = $_POST['department'] ?? '';
+    $address = $_POST['address'];
+    if(empty($name)){
+        $nameError="Name is required.";
+    }
+    if(empty($mobile)){
+        $mobileError="Mobile is required.";
+    }
+    if(empty($email)){
+        $emailError="Email is required.";
+    }
