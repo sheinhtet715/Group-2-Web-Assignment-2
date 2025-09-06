@@ -75,3 +75,14 @@ if(isset($_POST['update_button'])){
             padding: 0;
           
         }
+        body{
+            padding: 20px 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse; 
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #b4b2b2ff; 
+        }
