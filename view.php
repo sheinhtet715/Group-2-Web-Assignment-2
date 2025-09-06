@@ -86,3 +86,20 @@ if(isset($_POST['update_button'])){
         table, th, td {
             border: 1px solid #b4b2b2ff; 
         }
+         th, td {
+          padding: 8px;
+          text-align: left;
+        }
+        th {
+            background-color:  #d8dadcff;
+        }
+        button {
+
+            padding: 0px 3px; 
+
+            border-radius: 6px; 
+          
+        }
+
+    </style>
+</head>
