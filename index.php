@@ -58,5 +58,26 @@
         <input type="radio" id="female" name="gender" value="Female" <?php if ($gender === "Female") echo "checked"; ?>> Female 
         <span class="text-danger"><?php echo $genderError; ?></span><br><br>
     </div>
+
+     <div class="">
+
+        <label for="department">Department:</label><br>
+        <input type="checkbox" id="english"  name="department" value="English" <?php if ($department === "English") echo "checked"; ?>> English
+        <input type="checkbox" id="computer" name="department" value="Computer" <?php if ($department === "Computer") echo "checked"; ?>> Computer
+        <input type="checkbox" id="business" name="department" value="Business" <?php if ($department === "Business") echo "checked"; ?>> Business
+        <span class="text-danger"><?php echo $departmentError; ?></span><br><br>
+        </div>
+
+        <div class="">
+
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" rows="4" cols="30" value="<?php echo $address;?>"></textarea>
+         <span class="text-danger"><?php echo $addressError; ?></span><br><br>
+        </div>
+
+        <button type="submit" value="Register" name="create_btn">Register</button>
+        <br><br>
+        <a href="view.php">View All Registered Students</a>
+        </form>
 </body>
 </html>
