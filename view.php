@@ -162,3 +162,33 @@ if(isset($_POST['update_button'])){
     <input type="email" id="email" name="email" value="<?php echo $email?>">
     <span class="text-danger"><?php echo $emailError ?></span>
     </div><br>
+
+     <div>
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male" <?php if($gender=="Male"){echo "checked";} ?>> Male
+        <input type="radio" id="female" name="gender" value="Female" <?php if($gender=="Female"){echo "checked";} ?>> Female
+        </div><br>
+
+        <div>
+        <label for="department">Department:</label><br>
+        <input type="checkbox" id="english" name="department" value="English" <?php if($department=="English"){echo "checked";} ?>> English
+        <input type="checkbox" id="computer" name="department" value="Computer" <?php if($department=="Computer"){echo "checked";} ?>> Computer
+        <input type="checkbox" id="business" name="department" value="Business" <?php if($department=="Business"){echo "checked";} ?>> Business
+        <span class="text-danger"><?php echo $departmentError; ?></span>
+        </div><br>
+        
+        <div>
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" rows="4" cols="30" ><?php echo $address; ?></textarea>
+        <span class="text-danger"><?php echo $addressError ?></span>
+        </div><br>
+
+        <button type="submit" value="Update" name="update_button">Update Record</button>
+        <br><br>
+        <a href="view.php">Cancel and Go Back to List</a>
+        </form>
+
+        <?php endif; ?>
+
+</body>
+</html>
