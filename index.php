@@ -46,5 +46,17 @@
          <span class="text-danger"><?php echo $mobileError; ?></span><br><br>
         </div>
         
+    <div class="">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="<?php echo $email;?>" >
+        <span class="text-danger"><?php echo $emailError; ?></span><br><br>
+    </div>
+
+    <div class="">
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male"  <?php if ($gender === "Male") echo "checked"; ?>> Male
+        <input type="radio" id="female" name="gender" value="Female" <?php if ($gender === "Female") echo "checked"; ?>> Female 
+        <span class="text-danger"><?php echo $genderError; ?></span><br><br>
+    </div>
 </body>
 </html>
